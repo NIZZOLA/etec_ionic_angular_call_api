@@ -12,8 +12,8 @@ export class HomePage {
 
   ngOnInit() {}
 
-  showCadastro() {
-    this.navCtrl.navigateForward('cadastro');
+  showPage(pagina) {
+    this.navCtrl.navigateForward(pagina);
   }
 
 }

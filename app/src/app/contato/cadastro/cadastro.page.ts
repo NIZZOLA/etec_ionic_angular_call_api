@@ -34,10 +34,13 @@ export class CadastroPage implements OnInit {
   }
 
   cadastraContato() {
-     console.log('chamou o cadastro' + this.ionicForm.value['nome'] );
+     console.log('chamou o cadastro' + this.ionicForm.value['nome'] + " data:" + this.ionicForm.value['nascimento']);
 
-     /*
-     this.contatoApi.postContato("KAYKY", "kayky@etec.sp.gov.br", "999999", "2000-03-10T01:15:30.757Z")
+
+     this.contatoApi.postContato(this.ionicForm.value['nome'],
+                                 this.ionicForm.value['email'],
+                                 this.ionicForm.value['telefone'],
+                                 this.ionicForm.value['nascimento'])
         .then((json) => {
           console.log(json);
         })
@@ -45,7 +48,7 @@ export class CadastroPage implements OnInit {
           console.log(erro.error);
           this.erros = erro.error[0];
         });
-        */
+
   }
 
 }
