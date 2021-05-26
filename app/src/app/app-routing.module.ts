@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'consulta',
     loadChildren: () => import('./contato/consulta/consulta.module').then( m => m.ConsultaPageModule)
   },
+  {
+    path: 'camera',
+    loadChildren: () => import('./pages/camera/camera.module').then( m => m.CameraPageModule)
+  },
 ];
 
 @NgModule({
